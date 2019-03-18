@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
@@ -20,7 +19,6 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.find(params[:id])
   end
 
   # POST /articles
@@ -38,7 +36,6 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       flash[:notice] = "Article succesfully updated."
       redirect_to article_path(@article)
@@ -50,7 +47,6 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     flash[:notice] = "Article succesfully deleted."
     redirect_to articles_path
