@@ -1,0 +1,31 @@
+To create a feature branch:
+
+git checkout -b nameofbranch
+
+To create a feature branch named create-users:
+
+git checkout -b create-users
+
+To view list of branches:
+
+git branch
+
+To move to master branch:
+
+git checkout master
+
+To merge the changes in the feature branch to the master branch first switch to master branch:
+
+git checkout master
+
+git merge nameofbranch
+
+git push to push code to repository
+
+To delete a feature branch that is no longer needed and has been merged to master already:
+
+git branch -d nameofbranch
+
+To delete a feature branch that is no longer needed but has NOT been merged to master:
+
+git branch -D nameofbranch
